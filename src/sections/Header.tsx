@@ -5,33 +5,44 @@ import { ModeToggle } from "@/components/theme/theme-provider"
 import { useEffect, useState } from "react"
 import Logo from "@/components/Logo"
 import { LanguageChanger } from "@/components/Lang"
+import { usePathname   } from 'next/navigation'
 
 
 
-
-export function Header2(lang) {
-    console.log(lang)
+export function Header2() {
+    const path = usePathname ()
+    // console.log('usePathname :',path)
+    let lang = path
     const [useLang, setLang] = useState({
-        "header": "Sirdaryo tuman tibbiyot birlashmasi",
+        "header": "Oqoltin tuman tibbiyot birlashmasi",
         "about": "Biz haqimizda",
         "open_data": "Ochiq malumotlar",
-        "contact": "Bog&apos;lanish"
+        "contact": "Bog&apos;lanish",
+        "address": "Manzil",
+        "docs": "Hujjatlar",
+        "news": "Yangiliklar"
 
     })
     useEffect(() => {
-        if (lang === 'ru') {
+        if (lang === '/ru') {
             setLang({
                 "header": "Сырдарьинское районное медицинское объединение",
                 "about": "О нас",
                 "open_data": "Открытые данные",
-                "contact": "Контакты"
+                "contact": "Контакты",
+                "address": "Адрес",
+                "docs": "Документы",
+                "news": "Новости"
             })
-        } else if (lang === 'en') {
+        } else if (lang === '/en') {
             setLang({
                 "header": "Syrdarya regional medical association",
                 "about": "About Us",
                 "open_data": "Open data",
-                "contact": "Contacts"
+                "contact": "Contacts",
+                "address": "Address",
+                "docs": "Documents",
+                "news": "News"
             })
         }
         console.log(useLang)
@@ -103,15 +114,15 @@ export function Header2(lang) {
 
                 <ul className="DESKTOP-MENU hidden space-x-8 lg:flex ">
                     <li>
-                        <a href="#about">Biz haqimizda</a>
+                        <a href="#about">{useLang.about}</a>
                     </li>
                     <li>
-                        <a href="#footer">Manzil</a>
+                        <a href="#footer">{useLang.address}</a>
                     </li>
                     <li>
-                        <a href="#hujjatlar">Hujjatlar</a>
+                        <a href="#hujjatlar">{useLang.docs}</a>
                     </li>
-                    <li><a href="/news">Yangiliklar</a></li>
+                    <li><a href="/news">{useLang.docs}</a></li>
                     <li className="px-4">
                         <ModeToggle />
                     </li>
