@@ -115,7 +115,7 @@ function BlogListItem(props) {
   // console.log(blog)
 
   const handleDelete = async (id: string) => {
-    const taskDocRef = doc(db, "blogs", id);
+    const taskDocRef = doc(db, "oqoltin", id);
     try {
       await deleteDoc(taskDocRef);
     } catch (err) {
