@@ -1,47 +1,45 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import { Inter as FontSans } from "next/font/google"
-import { cn } from '@/lib/utils'
+"use client";
+import "./globals.css";
+import { Inter as FontSans } from "next/font/google";
+import { cn } from "@/lib/utils";
 
-
-import { ThemeProvider } from "@/components/theme/theme-provider"
-
+import { ThemeProvider } from "@/components/theme/theme-provider";
+import AuthProvider from "@/components/AuthProvider";
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-})
-
-export const metadata: Metadata = {
-  title: 'Sirdaryo tuman tibbiyot birlashmasi',
-  description: 'Sirdaryo viloyat Sirdaryo tuman tibbiyot birlashmasi',
-  keywords: ['ttb', 'sogliqni saqlash', 'sirdaryo', 'tibbiyot', 'salomatlik', 'bolnitsa sirdaryo', 'bolnitsa', 'klinika', 'kasalliklar', 'viloyat', "infeksion", "sirdaryo tuman", "tibbiyot birlashmasi", "Sirdaryo tuman tibbiyot birlashmasi"],
-}
+});
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="uz" suppressHydrationWarning>
       <head />
-      <body className={cn(
-        "min-h-screen font-sans antialiased",
-        fontSans.variable
-      )}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {/* <Header2/> */}
-          {children}
-          {/* <Footer/> */}
-          {/* <Footer2/> */}
-        </ThemeProvider>
+      <body
+        className={cn("min-h-screen font-sans antialiased", fontSans.variable)}
+      >
+        <Suspense fallback={<Loader />}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <AuthProvider>
+              {/* <Header2/> */}
+              {children}
+            </AuthProvider>
+            {/* <Footer/> */}
+            {/* <Footer2/> */}
+          </ThemeProvider>
+        </Suspense>
       </body>
     </html>
-  )
+  );
 }
