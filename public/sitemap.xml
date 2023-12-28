@@ -9,22 +9,28 @@
 
 <url>
   <loc>https://oqoltin-ttb.uz/</loc>
-  <lastmod>2023-11-30T08:25:16+00:00</lastmod>
+  <lastmod>2023-12-28T08:25:16+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://oqoltin-ttb.uz/ru</loc>
-  <lastmod>2023-11-30T08:25:16+00:00</lastmod>
+  <lastmod>2023-12-28T08:25:16+00:00</lastmod>
    <priority>1.00</priority>
 </url>
 <url>
   <loc>https://oqoltin-ttb.uz/en</loc>
-  <lastmod>2023-11-30T08:25:16+00:00</lastmod>
+  <lastmod>2023-12-28T08:25:16+00:00</lastmod>
    <priority>1.00</priority>
 </url>
 <url>
   <loc>https://oqoltin-ttb.uz/news/</loc>
-  <lastmod>2023-11-30T08:25:16+00:00</lastmod>
+  <lastmod>2023-12-28T08:25:16+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+
+<url>
+  <loc>https://oqoltin-ttb.uz/login/</loc>
+  <lastmod>2023-12-28T08:25:16+00:00</lastmod>
   <priority>0.60</priority>
 </url>
 
