@@ -44,7 +44,7 @@ export function Header2() {
         news: "News",
       });
     }
-    console.log(useLang);
+    // console.log(useLang);
   }, [lang]);
 
   const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false

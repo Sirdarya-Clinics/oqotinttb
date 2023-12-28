@@ -1,9 +1,9 @@
-import { About } from "@/components/About";
-import { Questions } from "@/components/Questions";
+import { AboutRu } from "@/components/About";
+import { QuestionsRu } from "@/components/Questions";
 import Carusel from "@/components/carusel";
-import Gallery, { Gallery3 } from "@/components/gallery/Gallery";
+import { GalleryRu } from "@/components/gallery/Gallery";
 import { GetNews } from "@/components/getNews";
-import {  FooterRu } from "@/sections/Footer";
+import { FooterRu } from "@/sections/Footer";
 import { Header2 } from "@/sections/Header";
 import { Suspense } from "react";
 import bg from "../../../public/page-bg.jpg";
@@ -50,13 +50,11 @@ export default function RuPage() {
           <span className="text-lg">Свяжитесь сейчас! </span>
         </p>
         <div className="font-medium  pt-4  dark:text-white">
-          <div className=" text-white grid gap-4">
-            
-          </div>
+          <div className=" text-white grid gap-4"></div>
           <div className="text-white grid gap-4">
             <h4 className="font-medium  pt-4 leading-none"> Прием </h4>
             <p className=" text-white text-sm text-muted-foreground">
-            67-236-34-01
+              67-236-34-01
             </p>
           </div>
         </div>
@@ -64,17 +62,17 @@ export default function RuPage() {
 
       <main className="flex min-h-screen max-w-auto flex-col items-center justify-between sm:p-24">
         <Carusel />
-        <About />
-        <Gallery />
+        <AboutRu />
+        <GalleryRu />
         {/* <Gallery2 /> */}
         <Suspense>
           <h2 className="text-3xl py-8">Новости</h2>
           <GetNews />
         </Suspense>
 
-        <Questions />
+        <QuestionsRu />
 
-        <Gallery3 />
+        {/* <Gallery3 /> */}
 
         {/* <h2 className=" pt-8 text-3xl">Meyoriy hujjatlar</h2>
         <section id="hujjatlar" className="flex flex-row justify-center gap-4 py-8">

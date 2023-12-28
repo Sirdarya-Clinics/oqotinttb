@@ -1,4 +1,4 @@
-import Gallery, { Gallery3 } from "@/components/gallery/Gallery";
+import { GalleryUz } from "@/components/gallery/Gallery";
 import Image from "next/image";
 import bg from "../../public/page-bg.jpg";
 import Carusel from "@/components/carusel";
@@ -8,12 +8,12 @@ import Carusel from "@/components/carusel";
 // import Klinik from "../../public/klinik.jpg";
 // import Narxlar from "../../public/narxlar.jpg";
 // import Link from "next/link";
-import { Questions } from "@/components/Questions";
-import { About } from "@/components/About";
+import { QuestionsUz } from "@/components/Questions";
+import { AboutUz } from "@/components/About";
 import { Suspense } from "react";
 import { GetNews } from "@/components/getNews";
 import { Header2 } from "@/sections/Header";
-import  { FooterUzb } from "@/sections/Footer";
+import { FooterUzb } from "@/sections/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -59,13 +59,11 @@ export default function Home() {
           <span className="text-lg">Hoziroq bog&apos;laning ! </span>
         </p>
         <div className="font-medium  pt-4  dark:text-white">
-          <div className=" text-white grid gap-4">
-            
-          </div>
+          <div className=" text-white grid gap-4"></div>
           <div className="text-white grid gap-4">
             <h4 className="font-medium  pt-4 leading-none"> Qabulxona </h4>
             <p className=" text-white text-sm text-muted-foreground">
-            67-236-34-01
+              67-236-34-01
             </p>
           </div>
         </div>
@@ -73,17 +71,17 @@ export default function Home() {
 
       <main className="flex min-h-screen max-w-auto flex-col items-center justify-between sm:p-24">
         <Carusel />
-        <About />
-        <Gallery />
+        <AboutUz />
+        <GalleryUz />
         {/* <Gallery2 /> */}
         <Suspense>
           <h2 className="text-3xl py-8">Yangiliklar</h2>
           <GetNews />
         </Suspense>
 
-        <Questions />
+        <QuestionsUz />
 
-        <Gallery3 />
+        {/* <Gallery3 /> */}
 
         {/* <h2 className=" pt-8 text-3xl">Meyoriy hujjatlar</h2>
         <section id="hujjatlar" className="flex flex-row justify-center gap-4 py-8">
