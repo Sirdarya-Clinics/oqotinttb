@@ -1,13 +1,15 @@
 "use client"
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+//@ts-ignore
 import { Carousel } from 'react-responsive-carousel';
 import Y1 from "../../public/bg1.jpg";
 import Y2 from "../../public/bg2.jpg";
 import Y3 from "../../public/bg3.jpg";
 import Y4 from "../../public/bg4.jpg";
 import Y5 from "../../public/bg5.jpg";
-import Y6 from "../../public/sir-ttb.jpg";
+import Y6 from "../../public/bg6.jpg";
+import Y7 from "../../public/bg7.jpg";
 import { Component } from "react";
 import Image from "next/image";
 
@@ -50,7 +52,7 @@ export default class NextJsCarousel extends Component {
                      
                   </div> 
                   <div> 
-                      <Image src={Y1} alt="image2" /> 
+                      <Image src={Y7} alt="image2" /> 
                      
                   </div> 
                   <div> 

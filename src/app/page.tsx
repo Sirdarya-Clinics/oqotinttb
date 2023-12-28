@@ -13,7 +13,7 @@ import { About } from "@/components/About";
 import { Suspense } from "react";
 import { GetNews } from "@/components/getNews";
 import { Header2 } from "@/sections/Header";
-import Footer, { Footer2 } from "@/sections/Footer";
+import  { FooterUzb } from "@/sections/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -60,15 +60,12 @@ export default function Home() {
         </p>
         <div className="font-medium  pt-4  dark:text-white">
           <div className=" text-white grid gap-4">
-            <h4 className="font-medium leading-none">Faks:</h4>
-            <p className="text-white text-sm text-muted-foreground">
-              67-377-21-75
-            </p>
+            
           </div>
           <div className="text-white grid gap-4">
             <h4 className="font-medium  pt-4 leading-none"> Qabulxona </h4>
             <p className=" text-white text-sm text-muted-foreground">
-              67-377-22-41
+            67-236-34-01
             </p>
           </div>
         </div>
@@ -108,7 +105,7 @@ export default function Home() {
           </Link>
         </section> */}
       </main>
-      <Footer2 />
+      <FooterUzb />
     </>
   );
 }

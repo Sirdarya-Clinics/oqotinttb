@@ -1,4 +1,4 @@
-import { Footer2 } from "@/sections/Footer";
+import { FooterEng } from "@/sections/Footer";
 import { Header2 } from "@/sections/Header";
 
 import { About } from "@/components/About";
@@ -9,6 +9,29 @@ import { GetNews } from "@/components/getNews";
 import { Suspense } from "react";
 import bg from "../../../public/page-bg.jpg";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Oqoltin regional medical association",
+  description: "Oqoltin regional medical association",
+  keywords: [
+    "ttb",
+    "sogliqni saqlash",
+    "sirdaryo",
+    "oqoltin",
+    "tibbiyot",
+    "salomatlik",
+    "bolnitsa sirdaryo",
+    "bolnitsa",
+    "klinika",
+    "kasalliklar",
+    "viloyat",
+    "infeksion",
+    "oqoltin tuman",
+    "tibbiyot birlashmasi",
+    "Oqoltin tuman tibbiyot birlashmasi",
+  ],
+};
 
 export default function EnPage() {
   return (
@@ -29,15 +52,12 @@ export default function EnPage() {
         </p>
         <div className="font-medium  pt-4  dark:text-white">
           <div className=" text-white grid gap-4">
-            <h4 className="font-medium leading-none">Fax:</h4>
-            <p className="text-white text-sm text-muted-foreground">
-              67-377-21-75
-            </p>
+            
           </div>
           <div className="text-white grid gap-4">
             <h4 className="font-medium  pt-4 leading-none"> Reception </h4>
             <p className=" text-white text-sm text-muted-foreground">
-              67-377-22-41
+            67-236-34-01
             </p>
           </div>
         </div>
@@ -77,7 +97,7 @@ export default function EnPage() {
           </Link>
         </section> */}
       </main>
-      <Footer2 />
+      <FooterEng />
     </>
   );
 }

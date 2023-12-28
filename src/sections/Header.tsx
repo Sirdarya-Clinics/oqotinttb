@@ -25,7 +25,7 @@ export function Header2() {
   useEffect(() => {
     if (lang === "/ru") {
       setLang({
-        header: "Сырдарьинское районное медицинское объединение",
+        header: "Акалтинский районное медицинское объединение",
         about: "О нас",
         open_data: "Открытые данные",
         contact: "Контакты",
@@ -35,7 +35,7 @@ export function Header2() {
       });
     } else if (lang === "/en") {
       setLang({
-        header: "Syrdarya regional medical association",
+        header: "Oqoltin regional medical association",
         about: "About Us",
         open_data: "Open data",
         contact: "Contacts",
@@ -126,7 +126,7 @@ export function Header2() {
             <a href="#hujjatlar">{useLang.docs}</a>
           </li>
           <li>
-            <a href="/news">{useLang.docs}</a>
+            <a href="/news">{useLang.news}</a>
           </li>
           <li className="px-4">
             <ModeToggle />

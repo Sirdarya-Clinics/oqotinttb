@@ -3,11 +3,34 @@ import { Questions } from "@/components/Questions";
 import Carusel from "@/components/carusel";
 import Gallery, { Gallery3 } from "@/components/gallery/Gallery";
 import { GetNews } from "@/components/getNews";
-import { Footer2 } from "@/sections/Footer";
+import {  FooterRu } from "@/sections/Footer";
 import { Header2 } from "@/sections/Header";
 import { Suspense } from "react";
 import bg from "../../../public/page-bg.jpg";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Акалтинский районное медицинское объединение",
+  description: "Акалтинский районное медицинское объединение",
+  keywords: [
+    "ttb",
+    "sogliqni saqlash",
+    "sirdaryo",
+    "oqoltin",
+    "tibbiyot",
+    "salomatlik",
+    "bolnitsa sirdaryo",
+    "bolnitsa",
+    "klinika",
+    "kasalliklar",
+    "viloyat",
+    "infeksion",
+    "oqoltin tuman",
+    "tibbiyot birlashmasi",
+    "Oqoltin tuman tibbiyot birlashmasi",
+  ],
+};
 
 export default function RuPage() {
   return (
@@ -24,19 +47,16 @@ export default function RuPage() {
         <p className=" text-white">
           <span className="text-4xl font-medium">Хотите связаться с нами?</span>
           <br />
-          <span className="text-lg">Связаться сейчас! </span>
+          <span className="text-lg">Свяжитесь сейчас! </span>
         </p>
         <div className="font-medium  pt-4  dark:text-white">
           <div className=" text-white grid gap-4">
-            <h4 className="font-medium leading-none">Факс:</h4>
-            <p className="text-white text-sm text-muted-foreground">
-              67-377-21-75
-            </p>
+            
           </div>
           <div className="text-white grid gap-4">
             <h4 className="font-medium  pt-4 leading-none"> Прием </h4>
             <p className=" text-white text-sm text-muted-foreground">
-              67-377-22-41
+            67-236-34-01
             </p>
           </div>
         </div>
@@ -76,7 +96,7 @@ export default function RuPage() {
           </Link>
         </section> */}
       </main>
-      <Footer2 />
+      <FooterRu />
     </>
   );
 }

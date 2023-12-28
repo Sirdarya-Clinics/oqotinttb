@@ -3,7 +3,7 @@ export function About() {
         <>
         <div id="about" className="flex flex-col justify-center p-8">
             <h2 className=" text-2xl text-blue-600">SHIFOXONA HAQIDA</h2>
-             <h1 className=" text-xl"> Sirdaryo viloyat yuqumli kasalliklar shifoxonasi
+             <h1 className=" text-xl"> Sirdaryo viloyat Oqoltin tuman tibbiyot birlashmasi
           </h1>
           <ul className="text-gray-500 content-center">
             <li>
